@@ -2,7 +2,9 @@ import React,{useEffect} from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import HeroSection from '../components/HeroSection'
 import { fetchProducts } from './productSlice'
+import {AiOutlinePlus,AiFillEye} from "react-icons/ai";
 
+//There is some of css codes in index.css check it.Its about opacity hover
 
 const ProductsView = () => {
 
@@ -26,11 +28,15 @@ const ProductsView = () => {
               {productsData.error && "fetching error"}
               {productsData.products.length>0 && 
                 productsData.products.map((val,key)=>(
-                  <div key={key}>
-                    <div><img src={val.image} /></div>
+                  <div key={key} className="product relative">
+                    <div className='scale-50'><img src={val.image} /></div>
                     <div className='text-gray-300'>{val.category}</div>
                     <div className=''>{val.title}</div>
                     <div>${val.price}</div>
+                    <div className='product-buttons text-2xl absolute top-20 right-20 opacity-0 transition-opacity duration-300'> 
+                      <button> <AiOutlinePlus /> </button>
+                      <button> <AiFillEye /> </button>
+                    </div>
                   </div>
               ))
               }
