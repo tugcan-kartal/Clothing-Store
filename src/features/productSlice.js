@@ -9,7 +9,6 @@ const initialState={
 
 export const fetchProducts=createAsyncThunk("fetchProducts",async()=>{
     const response=await axios.get("https://fakestoreapi.com/products");
-    console.log("eheğ",response.data)
     return response.data.filter(item=>item.category==="men's clothing" || item.category==="women's clothing")
 });
 

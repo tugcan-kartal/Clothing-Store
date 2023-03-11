@@ -1,4 +1,5 @@
 import {BrowserRouter as Router,Routes,Route} from "react-router-dom";
+import CardDetails from "./features/CardDetails";
 import FooterView from "./features/FooterView";
 import NavbarView from "./features/NavbarView";
 import ProductsView from "./features/ProductsView";
@@ -13,6 +14,7 @@ function App() {
 
           <Routes>
             <Route path="/" element={<ProductsView />}/>
+            <Route path="/CardDetail" element={<CardDetails />}/>
           </Routes>
 
           <FooterView />
