@@ -1,4 +1,5 @@
 import {BrowserRouter as Router,Routes,Route} from "react-router-dom";
+import CardBox from "./features/CardBox";
 import CardDetails from "./features/CardDetails";
 import FooterView from "./features/FooterView";
 import NavbarView from "./features/NavbarView";
@@ -14,6 +15,7 @@ function App() {
 
           <Routes>
             <Route path="/" element={<ProductsView />}/>
+            <Route path="/Cart" element={<CardBox />}/>
             <Route path="/CardDetail" element={<CardDetails />}/>
           </Routes>
 

@@ -1,9 +1,11 @@
 import React from 'react'
-import { useSelector } from 'react-redux'
+import { useSelector,useDispatch } from 'react-redux'
+import { addCardBox } from './cardBoxSlice';
 
 
 const CardDetails = () => {
 
+    const dispatch=useDispatch();
     const cartDetails=useSelector((state)=>state.cardDetailReducer).value
     console.log(cartDetails)
 
@@ -12,13 +14,12 @@ const CardDetails = () => {
         <div>
             <img src={cartDetails.image}/>
         </div>
-
         <div>
             <div>
                 <div>{cartDetails.title}</div>
                 <div>{cartDetails.price}</div>
                 <div>{cartDetails.description}</div>
-                <button>Add to cart</button>
+                <button onClick={()=>dispatch(addCardBox(cartDetails))}>Add to cart</button>
             </div>
         </div>
     </div>
