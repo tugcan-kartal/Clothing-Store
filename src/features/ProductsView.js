@@ -40,7 +40,6 @@ const ProductsView = () => {
                         <button onClick={()=>dispatch(detailCard(val))}>
                           <AiFillEye /> 
                         </button>
-                        
                       </Link>
                     </div>
                   </div>
