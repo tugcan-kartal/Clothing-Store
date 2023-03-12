@@ -5,6 +5,7 @@ import { fetchProducts } from './productSlice'
 import {AiOutlinePlus,AiFillEye} from "react-icons/ai";
 import { Link } from 'react-router-dom';
 import { detailCard } from './cardDetailsSlice';
+import { addCardBox } from './cardBoxSlice';
 
 //There is some of css codes in index.css check it.Its about opacity hover
 
@@ -35,7 +36,7 @@ const ProductsView = () => {
                     <div className=''>{val.title}</div>
                     <div>${val.price}</div>
                     <div className='product-buttons text-2xl absolute top-20 right-20 opacity-0 transition-opacity duration-300'> 
-                      <button> <AiOutlinePlus /> </button>
+                      <button onClick={()=>dispatch(addCardBox(val))}> <AiOutlinePlus /> </button>
                       <Link to="CardDetail"> 
                         <button onClick={()=>dispatch(detailCard(val))}>
                           <AiFillEye /> 
