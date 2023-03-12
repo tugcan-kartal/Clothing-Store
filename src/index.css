@@ -2,7 +2,3 @@
 @tailwind components;
 @tailwind utilities;
 
-.product:hover .product-buttons {
-    opacity: 1;
-  }
-  

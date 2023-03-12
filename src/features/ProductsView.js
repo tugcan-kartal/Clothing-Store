@@ -19,23 +19,29 @@ const ProductsView = () => {
   },[]);
 
   return (
-    <div className=''>
+    <div>
+
+
         <div>
             <HeroSection />
         </div>
     
         <div>
-            <div className='grid md:grid-cols-2 xl:grid-cols-4'>
+
+            <div className='grid md:grid-cols-2 xl:grid-cols-3 w-[90vw] mx-auto my-[10vh]'>
               {productsData.loading && "fetching data"}
               {productsData.error && "fetching error"}
               {productsData.products.length>0 && 
                 productsData.products.map((val,key)=>(
-                  <div key={key} className="product relative border-2 border-gray-600">
-                    <div className='scale-50'><img src={val.image} /></div>
-                    <div className='text-gray-300'>{val.category}</div>
-                    <div className=''>{val.title}</div>
-                    <div>${val.price}</div>
-                    <div className='product-buttons text-2xl absolute top-20 right-20 opacity-0 transition-opacity duration-300'> 
+
+                  <div key={key} className="relative flex flex-col">
+
+                    <div className='border-2 w-[20vw] h-[45vh] overflow-hidden'><img alt='not found' src={val.image} /></div>
+                    <div className='text-gray-400 text-lg my-2'>{val.category}</div>
+                    <div className='text-md font-semibol'>{val.title}</div>
+                    <div className='text-lg font-bold my-2'>${val.price}</div>
+
+                    <div className='text-2xl flex flex-col absolute top-0 left-0 text-pink-700 gap-y-1'> 
                       <button onClick={()=>dispatch(addCardBox(val))}> <AiOutlinePlus /> </button>
                       <Link to="CardDetail"> 
                         <button onClick={()=>dispatch(detailCard(val))}>
@@ -43,11 +49,15 @@ const ProductsView = () => {
                         </button>
                       </Link>
                     </div>
+
                   </div>
               ))
               }
             </div>
+
         </div>
+
+
     </div>
   )
 }

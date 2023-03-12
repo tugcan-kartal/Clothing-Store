@@ -9,7 +9,7 @@ const NavbarView = () => {
 
   const cardBox=useSelector((state)=>state.cardBoxReducer).value;
 
-  const [navbarBgColor,setNavbarBgColor]=useState("bg-red-500");
+  const [navbarBgColor,setNavbarBgColor]=useState("bg-pink-800");
   const [navbarBgOpacity,setNavbarBgOpacity]=useState("opacity-100");
 
   useEffect(()=>{
@@ -17,9 +17,9 @@ const NavbarView = () => {
     const handleScroll=()=>{
       if(window.pageYOffset>0){
         setNavbarBgColor("bg-gray-500");
-        setNavbarBgOpacity("opacity-30")
+        setNavbarBgOpacity("opacity-50")
       }else{
-        setNavbarBgColor("bg-red-500");
+        setNavbarBgColor("bg-pink-800");
         setNavbarBgOpacity("opacity-100");
       }
     };
