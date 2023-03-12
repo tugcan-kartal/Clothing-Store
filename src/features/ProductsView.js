@@ -19,7 +19,7 @@ const ProductsView = () => {
   },[]);
 
   return (
-    <div>
+    <div className=''>
         <div>
             <HeroSection />
         </div>
