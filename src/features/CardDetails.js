@@ -10,10 +10,13 @@ const CardDetails = () => {
     console.log(cartDetails)
 
   return (
-    <div className='flex'>
+
+    <div className='flex mt-[10vh] h-screen'>
+
         <div>
-            <img src={cartDetails.image}/>
+            <img alt='not found' src={cartDetails.image}/>
         </div>
+
         <div>
             <div>
                 <div>{cartDetails.title}</div>
@@ -22,8 +25,10 @@ const CardDetails = () => {
                 <button onClick={()=>dispatch(addCardBox(cartDetails))}>Add to cart</button>
             </div>
         </div>
+
     </div>
   )
+
 }
 
 export default CardDetails
