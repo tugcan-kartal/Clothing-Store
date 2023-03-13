@@ -11,8 +11,11 @@ export const cardBoxSlice=createSlice({
         addCardBox: (state,action)=>{
             state.value=[...state.value,action.payload];
         },
-        removeCardBox: (state,action)=>{
-            state.value=state.value.filter(item=>item.id!==action.payload)
+        removeCardBox: (state, action) => {
+            const index = state.value.findIndex(item => item.id === action.payload);
+            if (index !== -1) {
+              state.value.splice(index, 1);
+            }
         }
     }
 });
