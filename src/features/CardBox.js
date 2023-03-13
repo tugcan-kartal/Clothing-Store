@@ -1,6 +1,6 @@
-import React from 'react';
+import React,{useEffect} from 'react';
 import { useSelector,useDispatch } from 'react-redux';
-import { addCardBox,removeCardBox } from './cardBoxSlice';
+import { addCardBox,removeCardBox,deleteCardBox } from './cardBoxSlice';
 import {AiOutlinePlus} from "react-icons/ai";
 import {IoIosRemove} from "react-icons/io";
 import {BsFillTrashFill} from "react-icons/bs";
@@ -13,7 +13,7 @@ const CardBox = () => {
   return (
     <div className='pt-[15vh]  bg-gray-100 pb-[10vh]'>
 
-      <div onClick="" className="text-2xl flex justify-center text-pink-800"><BsFillTrashFill /></div>
+      <div onClick={()=>dispatch(deleteCardBox())} className="text-2xl flex justify-center text-pink-800"><BsFillTrashFill /></div>
 
       {cardBox && cardBox.map((item)=>(
         <div key={item.id} className="bg-white shadow-2xl w-[50vw] mx-auto mt-10"> 

@@ -16,9 +16,12 @@ export const cardBoxSlice=createSlice({
             if (index !== -1) {
               state.value.splice(index, 1);
             }
+        },
+        deleteCardBox: (state)=>{
+            state.value=[];
         }
     }
 });
 
-export const {addCardBox,removeCardBox}=cardBoxSlice.actions;
+export const {addCardBox,removeCardBox,deleteCardBox}=cardBoxSlice.actions;
 export default cardBoxSlice.reducer; 
