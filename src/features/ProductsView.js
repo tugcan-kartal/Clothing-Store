@@ -34,7 +34,7 @@ const ProductsView = () => {
               {productsData.products.length>0 && 
                 productsData.products.map((val,key)=>(
 
-                  <div key={key} className="relative flex flex-col">
+                  <div key={key} className="relative flex flex-col my-4">
 
                     <div className='border-2 w-[20vw] h-[45vh] overflow-hidden'><img alt='not found' src={val.image} /></div>
                     <div className='text-gray-400 text-lg my-2'>{val.category}</div>
