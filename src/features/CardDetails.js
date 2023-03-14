@@ -7,8 +7,8 @@ import {AiOutlinePlus} from "react-icons/ai";
 const CardDetails = () => {
 
     const dispatch=useDispatch();
-    const cartDetails=useSelector((state)=>state.cardDetailReducer).value
-
+    const cartDetails=useSelector((state)=>state.cardDetailReducer).value    //Got from store we assigned named cardDetailReducer
+                                                                             //and .value because of api needs to get Data
   return (
 
     <div className='flex flex-col mt-[10vh]'>

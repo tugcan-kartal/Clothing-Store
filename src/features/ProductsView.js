@@ -12,7 +12,7 @@ import { addCardBox } from './cardBoxSlice';
 const ProductsView = () => {
 
   const dispatch=useDispatch();
-  let productsData=useSelector((state)=>state.productReducer)   //got from store.js
+  let productsData=useSelector((state)=>state.productReducer)   ////Got from store we assigned named productReducer
 
   useEffect(()=>{
     dispatch(fetchProducts())

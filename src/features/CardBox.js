@@ -8,8 +8,8 @@ import {BsFillTrashFill} from "react-icons/bs";
 const CardBox = () => {
 
   const dispatch=useDispatch();
-  const cardBox=useSelector((state)=>state.cardBoxReducer).value;
-
+  const cardBox=useSelector((state)=>state.cardBoxReducer).value;   //Got from store we assigned named cardBoxReducer
+                                                                    //and .value because of api needs to get Data
   const [screen,setScreen]=useState("");
   
 
