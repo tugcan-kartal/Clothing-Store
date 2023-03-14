@@ -8,7 +8,6 @@ const CardDetails = () => {
 
     const dispatch=useDispatch();
     const cartDetails=useSelector((state)=>state.cardDetailReducer).value
-    console.log(cartDetails)
 
   return (
 

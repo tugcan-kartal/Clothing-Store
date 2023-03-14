@@ -5,11 +5,16 @@ import FooterView from "./features/FooterView";
 import NavbarView from "./features/NavbarView";
 import ProductsView from "./features/ProductsView";
 
+import { Toaster } from 'react-hot-toast';
+
+
 function App() {
   return (
       <div>
 
         <Router>
+
+          <Toaster />
 
           <NavbarView />
 

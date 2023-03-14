@@ -36,12 +36,12 @@ const ProductsView = () => {
 
                   <div key={key} className="relative flex flex-col my-4">
 
-                    <div className='border-2 w-[20vw] h-[45vh] overflow-hidden'><img alt='not found' src={val.image} /></div>
+                    <div className='border-2 w-[20vw] h-[45vh] overflow-hidden'><img className='scale-75 hover:scale-100 transition ease-in-out delay-150 ' alt='not found' src={val.image} /></div>
                     <div className='text-gray-400 text-lg my-2'>{val.category}</div>
                     <div className='text-md font-semibol'>{val.title}</div>
                     <div className='text-lg font-bold my-2'>${val.price}</div>
 
-                    <div className='text-2xl flex flex-col absolute top-0 left-0 text-pink-700 gap-y-1'> 
+                    <div className='text-2xl flex flex-col absolute top-0 left-0 text-pink-700 gap-y-4 hover:scale-110'> 
                       <button onClick={()=>dispatch(addCardBox(val))}> <AiOutlinePlus /> </button>
                       <Link to="CardDetail"> 
                         <button onClick={()=>dispatch(detailCard(val))}>
