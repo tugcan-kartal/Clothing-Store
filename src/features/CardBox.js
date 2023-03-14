@@ -27,13 +27,13 @@ const CardBox = () => {
       <div onClick={()=>dispatch(deleteCardBox())} className={`${screen} text-2xl flex justify-center text-pink-800 cursor-pointer`}><BsFillTrashFill /></div>
 
       {cardBox && cardBox.map((item,key)=>(
-        <div key={key} className="bg-white shadow-2xl w-[50vw] mx-auto mt-10"> 
+        <div key={key} className="bg-white shadow-2xl md:w-[50vw] mx-auto mt-10"> 
           <div className='text-center text-2xl font-semibold pt-2'> {item.title} </div>
-          <div> <img className='mx-auto w-[20vw] h-[45vh] mt-16 rounded-2xl' src={item.image} alt="not found"/> </div>
+          <div> <img className='mx-auto md:w-[20vw] md:h-[45vh] mt-16 rounded-2xl' src={item.image} alt="not found"/> </div>
           <div className='text-3xl font-bold text-center mt-16'> {item.price} $ </div>
-          <div className='flex justify-center gap-x-64'>
-            <button className='bg-gray-200 rounded-full p-1 my-2' onClick={()=>dispatch(addCardBox(item))}> <AiOutlinePlus /> </button>
-            <button className='bg-gray-200 rounded-full p-1 my-2' onClick={()=>dispatch(removeCardBox(item.id))}> <IoIosRemove /> </button>
+          <div className='flex justify-center gap-x-64 text-white'>
+            <button className='bg-pink-800 rounded-full p-1 my-2' onClick={()=>dispatch(addCardBox(item))}> <AiOutlinePlus /> </button>
+            <button className='bg-pink-800 rounded-full p-1 my-2' onClick={()=>dispatch(removeCardBox(item.id))}> <IoIosRemove /> </button>
           </div>
         </div>
       ))}

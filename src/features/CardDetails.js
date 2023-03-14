@@ -14,7 +14,7 @@ const CardDetails = () => {
     <div className='flex flex-col mt-[10vh]'>
 
         <div>
-            <img className='w-[20vw] h-[45vh] m-auto' alt='not found' src={cartDetails.image}/>
+            <img className='md:w-[20vw] md:h-[45vh] m-auto md:scale-100 scale-50' alt='not found' src={cartDetails.image}/>
         </div>
 
         <div>
@@ -22,7 +22,7 @@ const CardDetails = () => {
                 <div className='text-3xl font-semibold mt-16'>{cartDetails.title}</div>
                 <div className='text-2xl w-[70vw] mx-auto mt-8'>{cartDetails.description}</div>
                 <div className='text-4xl font-bold my-2'>{cartDetails.price} $</div>
-                <button className='bg-gray-200 rounded-full p-1 my-2' onClick={()=>dispatch(addCardBox(cartDetails))}><AiOutlinePlus /></button>
+                <button className='bg-pink-800 text-white rounded-full p-1 my-2' onClick={()=>dispatch(addCardBox(cartDetails))}><AiOutlinePlus /></button>
             </div>
         </div>
 

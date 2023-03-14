@@ -28,7 +28,7 @@ const ProductsView = () => {
     
         <div>
 
-            <div className='grid md:grid-cols-2 xl:grid-cols-3 w-[90vw] mx-auto my-[10vh]'>
+            <div className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 w-[90vw] mx-auto my-[10vh]'>
               {productsData.loading && "fetching data"}
               {productsData.error && "fetching error"}
               {productsData.products.length>0 && 
@@ -36,7 +36,7 @@ const ProductsView = () => {
 
                   <div key={key} className="relative flex flex-col my-4">
 
-                    <div className='border-2 w-[20vw] h-[45vh] overflow-hidden'><img className='scale-75 hover:scale-100 transition ease-in-out delay-150 ' alt='not found' src={val.image} /></div>
+                    <div className='md:ml-0 ml-16 md:border-2 w-[20vw] md:h-[45vh] overflow-hidden'><img className='scale-75 hover:scale-100 transition ease-in-out delay-150 ' alt='not found' src={val.image} /></div>
                     <div className='text-gray-400 text-lg my-2'>{val.category}</div>
                     <div className='text-md font-semibol'>{val.title}</div>
                     <div className='text-lg font-bold my-2'>${val.price}</div>
