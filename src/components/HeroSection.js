@@ -11,7 +11,7 @@ const HeroSection = () => {
             <p className='md:text-4xl text-xl'>with quality discount and fast delivery.</p>
         </div>
 
-        <div className='md:w-[40vw] w-[50vw] pt-8 w-[60vw]'>
+        <div className='md:w-[40vw] pt-8 w-[60vw]'>
             <img alt='not found' src={ShopIcon}/>
         </div>
         
