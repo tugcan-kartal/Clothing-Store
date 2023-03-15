@@ -8,7 +8,7 @@ const HeroSection = () => {
         <div className='w-[50vw] text-center sm:mb-[8vh] mb-[4vh]'>
             <p className='md:text-5xl text-xl text-center text-pink-800 mb-[5vh] font-bold'>TUGCAN</p>
             <p className='md:text-4xl text-xl'>Your products are waiting to be packed </p>
-            <p className='md:text-4xl text-xl'>with quality discount and fast delivery.</p>
+            <p className='md:text-4xl text-xl'>with <span className='font-semibold'>discount</span> and <span className='font-semibold'>fast delivery.</span> </p>
         </div>
 
         <div className='md:w-[40vw] pt-8 w-[60vw]'>
