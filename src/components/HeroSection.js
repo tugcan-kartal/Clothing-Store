@@ -6,6 +6,7 @@ const HeroSection = () => {
     <div className='flex md:flex-row flex-col h-screen mt-[5vh] justify-center items-center w-full bg-gray-100'>
 
         <div className='w-[50vw] text-center sm:mb-[8vh] mb-[4vh]'>
+            <p className='md:text-5xl text-xl text-center text-pink-800 mb-[5vh] font-bold'>TUGCAN</p>
             <p className='md:text-4xl text-xl'>Your products are waiting to be packed </p>
             <p className='md:text-4xl text-xl'>with quality discount and fast delivery.</p>
         </div>
