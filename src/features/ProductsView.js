@@ -36,7 +36,11 @@ const ProductsView = () => {
 
                   <div key={key} className="relative flex flex-col my-4">
 
-                    <div className='md:ml-0 ml-16 md:border-2 w-[20vw] md:h-[45vh] overflow-hidden'><img className='scale-75 hover:scale-100 transition ease-in-out delay-150 ' alt='not found' src={val.image} /></div>
+                    <Link to="CardDetail">
+                      <div onClick={()=>dispatch(detailCard(val))} className='md:ml-0 ml-16 md:border-2 w-[20vw] md:h-[45vh] overflow-hidden'><img className='scale-75 hover:scale-100 transition ease-in-out delay-150 ' alt='not found' src={val.image} /></div>
+                    </Link>
+                    
+                    
                     <div className='text-gray-400 text-lg my-2'>{val.category}</div>
                     <div className='text-md font-semibol'>{val.title}</div>
                     <div className='text-lg font-bold my-2'>${val.price}</div>
