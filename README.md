@@ -1,6 +1,6 @@
 # E-Commerce App
 
-This project published by netlify [To See Project](https://6411903e9351de1e26c9f112--tugcankartalecommercewebsite.netlify.app/).
+This project published by netlify [To See Project](https://642028a8960c8a1bb062584f--clothestorebytugcankartal.netlify.app/).
 ## The Main Technologies 
 
 ### REACTJS 
